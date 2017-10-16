@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {SharedService} from '../shared.service';
 
@@ -21,7 +21,16 @@ export class LoginComponent implements OnInit {
       this.router.navigate([user]);
     }
 
-    btnclick() {
+    btnclick(user: string) {
+      //set user(value) {}
+      //user = new EventEmitter();
+
+      //this.sharedService.propagateUser(this.user);
       this.router.navigateByUrl('../login2');
     }
+
+    @Input()
+    user: string;
+    @Output()
+    sendUser = new EventEmitter();
 }
