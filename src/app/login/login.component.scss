@@ -16,6 +16,15 @@
   padding-left: 20px;
 }
 
+.login{
+    background-image: url('./../../assets/images/reitz3.jpg'), url('./../../assets/images/Swamp.png');
+    background-size: cover;
+    background-repeat: repeat, repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
 .login-content {
   margin-bottom: 15px;
   color: white;
